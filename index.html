@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passover Seder 5786 — A Haggadah for Standing People</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+
+/* ─── RESET ─────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── BASE ──────────────────────────────────── */
+:root {
+  --ink:         #1c1c1c;
+  --teal:        #1d6b5e;
+  --teal-light:  #edf5f3;
+  --wine:        #7a2040;
+  --wine-light:  #f8f0f4;
+  --music:       #0d2957;
+  --music-light: #f0f4fa;
+  --amber:       #c17f24;
+  --amber-light: #fdf7ee;
+  --muted:       #666;
+  --border:      #d8d0c4;
+
+  /* Character colors */
+  --god:         #1a2d7a;
+  --moses:       #1d6b5e;
+  --aaron:       #4a7a2c;
+  --pharaoh:     #8b1a1a;
+  --miriam:      #5c2d7d;
+  --israelites:  #7a4e10;
+}
+
+html { background: #faf8f5; }
+
+body {
+  font-family: 'Crimson Pro', 'Georgia', serif;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 36px;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.75;
+  background: #faf8f5;
+}
+
+/* ─── TYPOGRAPHY ─────────────────────────────── */
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.45em;
+  font-weight: 700;
+  color: var(--teal);
+  border-bottom: 2px solid var(--teal);
+  padding-bottom: 5px;
+  margin: 2.8em 0 1em;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-style: italic;
+  color: #333;
+  margin: 2em 0 0.6em;
+}
+
+p { margin-bottom: 0.85em; }
+ol, ul { margin: 0.5em 0 0.8em 1.6em; }
+li { margin-bottom: 0.3em; }
+
+em { font-style: italic; }
+strong { font-weight: 600; }
+
+/* ─── COVER ──────────────────────────────────── */
+.cover {
+  text-align: center;
+  padding: 64px 0 56px;
+}
+
+.cover-eyebrow {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.85em;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.cover h1 {
+  font-size: 3.2em;
+  color: var(--ink);
+  margin-bottom: 6px;
+  line-height: 1.08;
+}
+
+.cover-sub {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-size: 1.1em;
+  color: var(--muted);
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+.cover-host {
+  margin-top: 52px;
+  font-size: 0.9em;
+  color: #888;
+  letter-spacing: 0.04em;
+}
+
+.cover-ornament {
+  color: var(--teal);
+  font-size: 1.6em;
+  margin: 28px 0 10px;
+  letter-spacing: 0.3em;
+}
+
+/* ─── DIVIDERS ────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.2em 0;
+}
+
+hr.heavy {
+  border-top: 2px solid var(--border);
+}
+
+/* ─── SEDER ORDER TABLE ───────────────────────── */
+.seder-order {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px 28px;
+  margin: 1em 0;
+  font-size: 0.88em;
+}
+
+.seder-step {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 3px 0;
+}
+
+.seder-num {
+  font-weight: 700;
+  color: var(--teal);
+  min-width: 22px;
+  font-size: 0.85em;
+  flex-shrink: 0;
+}
+
+.seder-label { color: var(--ink); }
+
+/* ─── CAST ───────────────────────────────────── */
+.cast-block {
+  margin-bottom: 1em;
+}
+
+.cast-role {
+  font-weight: 700;
+  font-size: 0.82em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cast-desc {
+  font-size: 0.9em;
+  color: var(--muted);
+  padding-left: 1em;
+  margin-top: 1px;
+}
+
+/* ─── DIALOGUE ───────────────────────────────── */
+.line {
+  margin: 0.65em 0;
+  padding-left: 0;
+}
+
+.role {
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.god        { color: var(--god); }
+.moses      { color: var(--moses); }
+.aaron      { color: var(--aaron); }
+.pharaoh    { color: var(--pharaoh); }
+.miriam     { color: var(--miriam); }
+.israelites { color: var(--israelites); }
+.youngest   { color: var(--moses); }
+.all-color  { color: var(--teal); }
+
+/* ─── STAGE DIRECTIONS ───────────────────────── */
+.stage {
+  font-style: italic;
+  color: #888;
+  font-size: 0.88em;
+}
+
+.stage-block {
+  display: block;
+  font-style: italic;
+  color: #888;
+  font-size: 0.88em;
+  margin: 0.6em 0;
+  padding-left: 1em;
+  border-left: 2px solid var(--border);
+}
+
+/* ─── SCENE HEADER ───────────────────────────── */
+.scene {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+  font-size: 0.88em;
+  margin: 1.5em 0 1em;
+  letter-spacing: 0.05em;
+}
+
+/* ─── ACTION BOXES ───────────────────────────── */
+.do-this {
+  background: var(--teal-light);
+  border-left: 4px solid var(--teal);
+  padding: 12px 16px;
+  margin: 1.2em 0;
+  border-radius: 0 4px 4px 0;
+  font-weight: 600;
+  color: #1a4a40;
+  font-size: 0.92em;
+  line-height: 1.6;
+}
+
+.wine-box {
+  background: var(--wine-light);
+  border-left: 4px solid var(--wine);
+  padding: 12px 16px;
+  margin: 1.2em 0;
+  border-radius: 0 4px 4px 0;
+  font-weight: 600;
+  color: #5a1030;
+  font-size: 0.95em;
+}
+
+.music-box {
+  background: var(--music-light);
+  border-left: 4px solid var(--music);
+  padding: 12px 16px;
+  margin: 1.2em 0;
+  border-radius: 0 4px 4px 0;
+  font-weight: 600;
+  color: #0d2957;
+  font-size: 0.95em;
+}
+
+/* ─── REFLECTION BOXES ───────────────────────── */
+.reflect {
+  background: var(--amber-light);
+  border: 1px solid #e0c07a;
+  padding: 14px 18px;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  font-size: 0.92em;
+  line-height: 1.7;
+}
+
+.reflect-label {
+  display: block;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+
+/* ─── ALL TOGETHER ───────────────────────────── */
+.together {
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--teal);
+  margin: 1em 0;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+/* ─── HEBREW ─────────────────────────────────── */
+.hebrew {
+  font-size: 1.5em;
+  text-align: center;
+  direction: rtl;
+  line-height: 2;
+  margin: 0.4em 0 0;
+  font-family: 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+.transliteration {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin: 2px 0;
+  font-size: 0.92em;
+}
+
+.translation {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88em;
+  margin-bottom: 0.9em;
+  font-style: italic;
+}
+
+/* ─── PLAGUES ────────────────────────────────── */
+.plague {
+  margin: 0.5em 0 0.2em;
+  font-size: 0.97em;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.plague-icon { font-size: 1em; }
+.plague-heb { direction: rtl; font-size: 1.1em; font-family: 'Times New Roman', serif; }
+
+.pharaoh-reaction {
+  margin: 0 0 0.8em 2em;
+  font-size: 0.88em;
+  color: var(--muted);
+  font-style: italic;
+  border-left: 2px solid #e8c8c8;
+  padding-left: 10px;
+}
+
+.pharaoh-reaction .role { font-size: 0.75em; }
+
+/* ─── SECTION TAG ────────────────────────────── */
+.section-tag {
+  display: block;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.8em;
+}
+
+/* ─── SEDER PLATE ────────────────────────────── */
+.plate-item {
+  margin-bottom: 0.6em;
+  font-size: 0.95em;
+}
+
+.plate-name {
+  font-weight: 700;
+  color: var(--teal);
+}
+
+/* ─── PRINT ──────────────────────────────────── */
+@media print {
+  html, body { background: white; }
+  body { padding: 16px 20px; font-size: 12.5px; max-width: 100%; }
+  .cover { padding: 40px 0 32px; }
+  .cover h1 { font-size: 2.6em; }
+  h2 { page-break-after: avoid; font-size: 1.2em; }
+  h3 { page-break-after: avoid; }
+  .no-break { page-break-inside: avoid; }
+  .page-break { page-break-before: always; }
+  .reflect, .do-this, .wine-box { page-break-inside: avoid; }
+  a { text-decoration: none; color: inherit; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- COVER                                       -->
+<!-- ══════════════════════════════════════════ -->
+
+<div class="cover">
+  <div class="cover-eyebrow">Passover · 5786</div>
+  <h1>A Haggadah<br>for Standing<br>People</h1>
+  <div class="cover-sub">
+    A Seder in one act<br>
+    with wine, matzah, and audience participation (mandatory)
+  </div>
+  <div class="cover-ornament">✦ ✦ ✦</div>
+  <div class="cover-host">
+    Prepared for the Kenorkin Seder<br>
+    April 2026
+  </div>
+</div>
+
+<hr class="heavy">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEDER PLATE                                 -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>The Seder Plate</h2>
+
+<p>On our table tonight, six items—each a symbol, each a story:</p>
+
+<div class="plate-item"><span class="plate-name">Karpas</span> — Parsley. Dipped in salt water, it holds spring and tears in the same bite.</div>
+<div class="plate-item"><span class="plate-name">Maror</span> — Bitter herbs (horseradish). The bitterness of slavery, raw and unapologetic.</div>
+<div class="plate-item"><span class="plate-name">Charoset</span> — Sweet fruit, nuts, and wine, representing the mortar the Israelites used to build Pharaoh's monuments. The fact that it tastes good is a feature, not a bug.</div>
+<div class="plate-item"><span class="plate-name">Beitzah</span> — A hard-boiled egg. Spring. New life. Also: something that toughens when you apply heat to it, like certain people we know.</div>
+<div class="plate-item"><span class="plate-name">Zeroah</span> — The shank bone. The Passover sacrifice, which we no longer perform. We point at the bone.</div>
+<div class="plate-item"><span class="plate-name">Orange</span> — A modern addition: a symbol of justice and inclusion for all marginalized members of our community. Someone once said placing an orange on the seder plate made as much sense as a woman being a rabbi. That person was wrong on both counts. The orange stays.</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- THE ORDER                                   -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>The Order of the Night</h2>
+
+<p>This is a Haggadah—which means <em>the telling.</em> There are fifteen steps. We will do all of them. Nobody is leaving early.</p>
+
+<div class="seder-order">
+  <div class="seder-step"><span class="seder-num">1.</span><span class="seder-label">Kadesh — Bless the wine (1st cup)</span></div>
+  <div class="seder-step"><span class="seder-num">9.</span><span class="seder-label">Maror — Eat bitter herbs</span></div>
+  <div class="seder-step"><span class="seder-num">2.</span><span class="seder-label">Urchatz — Wash hands (no blessing)</span></div>
+  <div class="seder-step"><span class="seder-num">10.</span><span class="seder-label">Korech — The sandwich</span></div>
+  <div class="seder-step"><span class="seder-num">3.</span><span class="seder-label">Karpas — Dip the greens</span></div>
+  <div class="seder-step"><span class="seder-num">11.</span><span class="seder-label">Cups 3 &amp; 4, Elijah &amp; Miriam</span></div>
+  <div class="seder-step"><span class="seder-num">4.</span><span class="seder-label">Yachatz — Break the matzah</span></div>
+  <div class="seder-step"><span class="seder-num">12.</span><span class="seder-label">Shulchan Orech — <em>Finally.</em> Eat.</span></div>
+  <div class="seder-step"><span class="seder-num">5.</span><span class="seder-label">Maggid — Tell the story (2nd cup poured)</span></div>
+  <div class="seder-step"><span class="seder-num">13.</span><span class="seder-label">Tzafun — Find the Afikomen</span></div>
+  <div class="seder-step"><span class="seder-num">6.</span><span class="seder-label">Rachtzah — Wash hands (with blessing)</span></div>
+  <div class="seder-step"><span class="seder-num">14.</span><span class="seder-label">Nirtzah — Done. Go home.</span></div>
+  <div class="seder-step"><span class="seder-num">7–8.</span><span class="seder-label">Motzi Matzah — Eat the matzah</span></div>
+  <div class="seder-step"><span class="seder-num"></span><span class="seder-label"></span></div>
+</div>
+
+<p style="font-size: 0.88em; font-style: italic; color: var(--muted); margin-top: 0.6em;">Four cups of wine tonight. Pour generously. This is not a tasting; it is a commandment.</p>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CAST                                        -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>Tonight's Cast</h2>
+
+<p>This is a participatory seder. Roles are not optional. If you wanted to be an audience member, you should have stayed home.</p>
+
+<p>Your host is playing <strong>God</strong>. No notes, please.</p>
+
+<div class="cast-block">
+  <div class="cast-role god">God / Narrator</div>
+  <div class="cast-desc">Omniscient. Occasionally exasperated. Still genuinely moved by this story after 3,000 years of tellings. Has complicated feelings about the golden calf. Tonight those feelings are tabled. <em>Played by your host.</em></div>
+</div>
+
+<div class="cast-block">
+  <div class="cast-role moses">Moses</div>
+  <div class="cast-desc">The prophet. Famously reluctant. Famously bad at public speaking—this is historically documented. Pulled off the greatest liberation in human history despite himself.</div>
+</div>
+
+<div class="cast-block">
+  <div class="cast-role aaron">Aaron</div>
+  <div class="cast-desc">Moses's brother and designated spokesperson. Enthusiastic. Occasionally too enthusiastic. The hype man the situation needed, if not always the one it deserved.</div>
+</div>
+
+<div class="cast-block">
+  <div class="cast-role pharaoh">Pharaoh</div>
+  <div class="cast-desc">The antagonist. Most powerful man in the world. Constitutionally unable to learn from his mistakes. Excellent taste in monumental architecture. Will be present tonight even when he's not in a scene.</div>
+</div>
+
+<div class="cast-block">
+  <div class="cast-role miriam">Miriam</div>
+  <div class="cast-desc">Moses's sister. Prophet. The one who watched from the reeds. The one who had a plan <em>and</em> a song for afterward. Historically underrated. Tonight we fix that.</div>
+</div>
+
+<div class="cast-block">
+  <div class="cast-role israelites">The Israelites</div>
+  <div class="cast-desc">(2–3 people) The people. Freed from centuries of slavery. Already complaining. It's how they cope. We love them for it.</div>
+</div>
+
+<p style="font-size: 0.9em; color: var(--muted); margin-top: 0.8em; font-style: italic;">Everyone participates. The Torah is pretty clear on this. You can complain (kvetch) because
+  it's culturally appropriate, but you still have to do it.
+</p>
+
+<hr class="heavy">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. KADESH                                   -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>① Kadesh — Blessing Over Wine</h2>
+<span class="section-tag">First Cup 🍷</span>
+
+<div class="line"><span class="role god">God:</span> Welcome, everyone, to our Passover Seder. I am your host and, 
+  for tonight's purposes, also God.</div>
+
+<div class="line"><span class="role god">God:</span> We begin, as Jews have begun for millennia, with wine. Because the Torah commands it. And also because it helps. We drink four cups tonight—one for each of God's four promises of liberation to the Israelite people. I said: <em>I will bring you out. I will deliver you. I will redeem you. I will take you as my people.</em> Four promises. Four cups. There are no optional cups*. 
+  <br/>
+  *except if you're not drinking, we do support you.</div>
+
+<div class="line"><span class="role god">God:</span> There is, for the record, a rabbinic debate about whether it should be five cups. There's a fifth promise—<em>I will bring you to the land</em>—and some say that deserves a fifth cup. We never resolved it, and it's frankly problematic. You will see a cup poured for Elijah the prophet later tho—the one who is supposed to show up and settle all unresolved questions. He hasn't arrived yet. We pour the cup anyway. More on that when we get there.</div>
+
+<div class="wine-box">🍷 Pour the first cup. Fill it generously. You will need it.</div>
+
+<div class="line"><span class="role god">God:</span> We say the blessing over wine.</div>
+
+<div class="hebrew">בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּפֶן</div>
+<div class="transliteration">Baruch Atah Adonai, Eloheinu Melech ha-olam, borei p'ri hagafen.</div>
+
+<div class="together">All: Blessed are You, our God, Ruler of the Universe,<br>who creates the fruit of the vine.</div>
+
+<div class="line"><span class="role god">God:</span> And the Shehecheyanu—the blessing we say for special moments. For firsts. For returning. This prayer is over 2,000 years old and has been said in every language Jews have spoken, in every country they've lived in or been expelled from, at tables this size and at tables of fifty. Tonight we say it here.</div>
+
+<div class="hebrew">בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה</div>
+<div class="transliteration">Baruch Atah Adonai, Eloheinu Melech ha-olam, she-hecheyanu v'key'manu v'higiyanu lazman hazeh.</div>
+<div class="translation">Blessed are You, who has kept us alive, sustained us, and enabled us to reach this moment.</div>
+
+<div class="wine-box">🍷 Drink the first cup.</div>
+
+<div class="reflect">
+  <span class="reflect-label">Next reader ✦</span>
+  The rabbis argued about what the four cups really mean. Some said they represent the four matriarchs—Sarah, Rebecca, Rachel, and Leah. Some said they're the four stages of liberation: becoming aware of oppression, opposing it, imagining an alternative, and accepting responsibility to act. The tradition never settled on one answer. Maybe that's the point: freedom requires all of it, and you have to drink all four cups to get there.
+</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. URCHATZ                                  -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>② Urchatz — Washing Hands (No Blessing)</h2>
+
+<div class="line"><span class="role god">God:</span> We wash our hands. Without a blessing—deliberately. Why no blessing yet? Because the blessing comes when we're ready. We've been somewhere else today. We've been on our phones, running late, arriving from full and complicated lives. Now we wash our hands, and we get here. That's all this is.</div>
+
+<div class="do-this">Pass a bowl of water, a small cup, and a towel. Pour three times over each hand. No blessing. Just water. Just arriving.</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. KARPAS                                   -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>③ Karpas — Dipping the Greens</h2>
+
+<div class="line"><span class="role god">God:</span> We dip parsley in salt water. The parsley is spring—new growth, possibility, the world greening after a long winter. The salt water is tears: the tears of the Israelites in Egypt, the tears of people who don't yet know they'll be freed. We hold both at once. We eat them together. It tastes exactly like what it sounds like. Eat it anyway.</div>
+
+<div class="hebrew">בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָאֲדָמָה</div>
+<div class="transliteration">Baruch Atah Adonai, Eloheinu Melech ha-olam, borei p'ri ha-adamah.</div>
+<div class="translation">Blessed are You, who creates the fruit of the earth.</div>
+
+<div class="do-this">Dip the parsley in salt water. Eat it. Take a moment with the combination.</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. YACHATZ                                  -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>④ Yachatz — Breaking the Matzah</h2>
+
+<div class="line"><span class="role god">God:</span> There are three pieces of matzah on our table. We break the middle one in half. The smaller piece goes back on the plate. The larger piece—the Afikomen—is hidden somewhere in this space. The seder cannot end until it's found. This is either a charming tradition or a very low-stakes hostage situation. It's probably both.</div>
+
+<div class="line"><span class="role moses">Moses:</span> You know what else was broken in half, sent away, and eventually found? Me. I was put in a basket, floated down a river, raised in a palace, discovered my own identity while standing in front of a bush that was on fire but somehow not burning, at the age of forty. The metaphor practically writes itself.</div>
+
+<div class="line"><span class="role god">Next reader:</span> Liberation is made by imperfect, broken people. Broken people are the only kind of people who exist. Don't wait until you're whole to get involved in the repair of the world—you'll be waiting a very long time.</div>
+
+<div class="do-this">Break the middle matzah. Return the smaller half to the plate. Hide the larger half somewhere in the space. Do it dramatically. The Israelites must avert their eyes—and they will make this as theatrical as possible.</div>
+
+<div class="stage-block">(The Israelites cover their eyes.)</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. MAGGID                                   -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>⑤ Maggid — Tell the Story</h2>
+
+<div class="wine-box">🍷 Pour the second cup now — but don't drink it yet. It sits in front of you through the entire story. You'll drink it at the end of Maggid, after Dayenu. Think of it as the cup the Israelites hadn't earned yet.</div>
+
+<h3>Ha Lachma Anya — The Bread of Affliction</h3>
+
+<div class="line"><span class="role god">God:</span> We hold up the matzah and say together:  <em>Ha lachma anya.</em></div>
+
+<div class="together">
+All: This is the bread of affliction—<br>the humble bread our ancestors ate in Egypt.<br><br>
+Let all who are hungry come and eat.<br>
+Let all who are in need come and celebrate Passover with us.<br><br>
+This year we are here. Next year, may there be peace and coexistence in the Middle East*.<br>
+This year, we are still enslaved. Next year, may we be free.
+</div>
+
+<p class="transliteration">*Traditionally, "may we be in the land of Israel" - we're evolving this tradition to be more inclusive and relevant to the modern Jewish experience.</p>
+
+<div class="reflect">
+  <span class="reflect-label">Next reader ✦</span>
+  We say this <em>before</em> we've eaten—before we've fed ourselves—because the tradition insists that hospitality cannot wait until you are satisfied. You share what you have when others are hungry, not after. This is not a convenient commandment. It asks us to hold the door open before we've even sat down (although no one is sitting down tonight!). And it's the very first thing we say when the telling begins: not the history, not the explanation, not the context. First: open the door.
+</div>
+
+<h3>The Four Questions</h3>
+
+<div class="line"><span class="role god">God:</span> Now. The youngest person here.</div>
+
+<div class="stage-block">(A pause while everyone performs the silent calculus of who that is. It's Maria.)</div>
+
+<div class="line"><span class="role god">God:</span> Yes. You. We now bully you into asking the questions. As a favor to you,
+we're also volunt-telling your husband to read the Hebrew.</div>
+
+<div class="line"><span class="role youngest">Youngest/Husband:</span></div>
+
+<div class="hebrew">מַה נִּשְׁתַּנָּה הַלַּיְלָה הַזֶּה מִכָּל הַלֵּילוֹת</div>
+<div class="transliteration">Ma nishtana halaila hazeh mikol haleilot?</div>
+<div class="together">Why is this night different from all other nights?</div>
+
+<div class="hebrew">שֶׁבְּכָל־הַלֵּילוֹת, אָֽנוּ אוֹכְלִין חָמֵץ וּמַצָּה; הַלַּֽיְלָה הַזֶּה, כֻּלּוֹ מַצָּה.</div>
+<div class="transliteration">Sheb'chol haleilot anu ochlin chametz umatzah, halailah hazeh, kuloh matzah.</div>
+<div class="together">On all other nights we eat leavened bread or matzah. Tonight, only matzah.</div>
+
+<div class="hebrew">שֶׁבְּכָל־הַלֵּילוֹת, אָֽנוּ אוֹכְלִין שְׁאָר יְרָקוֹת; הַלַּֽיְלָה הַזֶּה, מָרוֹר.</div>
+<div class="transliteration">Sheb'chol haleilot anu ochlin sh'ar y'rakot, halailah hazeh, maror.</div>
+<div class="together">On all other nights we eat all kinds of vegetables. Tonight, bitter herbs.</div>
+
+<div class="hebrew">שֶׁבְּכָל־הַלֵּילוֹת, אֵין אָֽנוּ מַטְבִּילִין אֲפִֽלּוּ פַּעַם אֶחָת; הַלַּֽיְלָה הַזֶּה, שְׁתֵּי פְעָמִים.</div>
+<div class="transliteration">Sheb'chol haleilot ein anu matbilin afilu pa'am echat; halailah hazeh, sh'tei f'amim.</div>
+<div class="together">On all other nights we don't dip our food. Tonight we dip twice.</div>
+
+<div class="hebrew">שֶׁבְּכָל־הַלֵּילוֹת, אָֽנוּ אוֹכְלִין בֵּין יוֹשְׁבִין וּבֵין מְסֻבִּין; הַלַּֽיְלָה הַזֶּה, כֻּלָּֽנוּ מְסֻבִּין.</div>
+<div class="transliteration">Sheb'chol haleilot anu ochlin bein yoshvin uvein m'subin; halailah hazeh, kulanu m'subin.</div>
+<div class="together">On all other nights we eat either sitting or reclining. <strong>Tonight, we all recline.*</strong></div>
+
+
+<div class="line"><span class="role god">God:</span> *The reclining is symbolic. Reclining was how free people ate in the ancient world—leisurely, without fear, taking their time. A slave eats quickly, on their feet, ready to move at any moment. Tonight we are not slaves. We linger. But tonight, 
+  we also stand. We tell the whole story. The reclining is symbolic.</div>
+
+<div class="music-box">🎵 <a target="_blank" href="https://open.spotify.com/track/5ktgC49PqPeIoQ1dKxnisY?si=1a355961e2234517">Mah Nishtana</a></div>
+
+
+<h3>The Four Children</h3>
+
+<div class="line"><span class="role god">God:</span> The Torah describes four types of people who approach this story. We meet all of them every year at every seder. You may recognize some of them in this room tonight.</div>
+
+<div class="line"><span class="role israelites">Next reader:</span> <em>The Wise Child asks:</em> "What are all these laws and customs? What do they mean? Explain everything."</div>
+
+<div class="reflect" style="margin: 0.5em 0 1em;">
+  <span class="reflect-label">Next reader ✦</span>
+  Everything. The whole story, the hard parts, the things we're still arguing about. Genuine curiosity is its own kind of sacred. We tell the Wise Child the full truth: we were slaves, it was terrible, God freed us, freedom comes with obligations, and we're still working on all of them.
+</div>
+
+<div class="line"><span class="role israelites">Next reader:</span> <em>The Wicked Child asks:</em> "What does this mean to <em>you</em> people?"</div>
+
+<div class="line"><span class="role israelites">Next reader:</span> They said "you"—not "us." They stepped back from the story, watching the Exodus from the shore, wondering if it's really worth getting involved.</div>
+
+<div class="reflect" style="margin: 0.5em 0 1em;">
+  <span class="reflect-label">Next reader ✦</span>
+  If you had been in Egypt, would you have walked through the sea? Or would you have looked at the waves and decided it wasn't a good time? We don't ask this to embarrass you. We ask because freedom requires <em>us</em>—all of us, together. You are part of this story whether you opted in or not. Drink your wine and get in the water.
+</div>
+
+<div class="line"><span class="role israelites">Next reader:</span> <em>The Simple Child asks:</em> "What is this?"</div>
+
+<div class="reflect" style="margin: 0.5em 0 1em;">
+  <span class="reflect-label">Next reader ✦</span>
+  With a strong hand, God brought us out of Egypt, out of slavery, into freedom. Not because we were perfect. Not because we deserved it more than others. Because slavery is wrong—and a God who insists on justice eventually makes that point, even when it takes ten plagues to do it.
+</div>
+
+<div class="line"><span class="role israelites">Next reader:</span> And the one who doesn't know how to ask.</div>
+
+
+<div class="reflect" style="margin: 0.5em 0 1em;">
+  <span class="reflect-label">Next reader ✦</span>
+  We begin for them. We open the door. We say: you are here, and that is the beginning. Your presence is its own kind of question, and it counts.
+</div>
+
+<h3>The Exodus — In One Act</h3>
+
+<div class="line"><span class="role god">God:</span> And now. The story.</div>
+
+<div class="scene">— SCENE ONE: Egypt —</div>
+
+<div class="line"><span class="role god">God:</span> Thousands of years ago, in Egypt, the Israelites had been enslaved for generations. They built the empire—its monuments, its granaries, its cities. Their labor was the foundation of everything Pharaoh had. And the empire, as empires do, decided that even this was not enough.</div>
+
+<div class="line"><span class="role pharaoh">Pharaoh:</span> I have been informed that the Hebrew people are... multiplying. This is frankly alarming. I'm going to need someone to handle it.</div>
+
+<div class="line"><span class="role god">God:</span> Pharaoh ordered that every newborn Hebrew boy be thrown into the Nile.</div>
+
+<div class="line"><span class="role pharaoh">Pharaoh:</span> It was a small policy adjustment.</div>
+
+<div class="line"><span class="role god">God:</span> It was not a small policy adjustment.</div>
+
+<div class="line"><span class="role pharaoh">Pharaoh:</span> I needed stability.</div>
+
+<div class="line"><span class="role god">God:</span> You were the most powerful man in the world. You needed nothing.</div>
+
+
+<div class="scene">— SCENE TWO: The Basket —</div>
+
+<div class="line"><span class="role god">God:</span> One woman—Yocheved—refused. She waterproofed a basket, put her newborn son inside it, and sent it down the Nile.</div>
+
+<div class="line"><span class="role miriam">Miriam:</span> I was there. I watched from the reeds. I didn't know what was going to happen. I just waited. My mother said: sometimes the only move is to put the thing you love most in the water and trust the current.</div>
+
+<div class="line"><span class="role god">God:</span> Pharaoh's daughter found the baby. She knew immediately what he was. She named him Moses. And she raised him as her own, in the palace.</div>
+
+<div class="line"><span class="role pharaoh">Pharaoh:</span> In <em>my</em> house.</div>
+
+<div class="line"><span class="role god">God:</span> In your house.</div>
+
+<div class="line"><span class="role pharaoh">Pharaoh:</span> <span class="stage">(long pause)</span> I did not foresee this.</div>
+
+<div class="scene">— SCENE THREE: The Burning Bush (Moses's Least Favorite Story To Tell) —</div>
+
+<div class="line"><span class="role god">God:</span> Moses grew up. He saw an Egyptian overseer beating an Israelite slave. He intervened. He had to flee Egypt. He ended up in Midian, married a woman named Tzipporah, became a shepherd, and by all accounts was finally, gratefully, settling into a quiet life with no further obligations.</div>
+
+<div class="line"><span class="role moses">Moses:</span> I had goats. I was genuinely good with goats.</div>
+
+<div class="line"><span class="role god">God:</span> And then I spoke to him from a burning bush.</div>
+
+<div class="line"><span class="role moses">Moses:</span> For the record: the bush was on fire but was not being consumed, which is unusual, and I went to investigate because I am a curious person. Not because I was looking for a divine mission.</div>
+
+<div class="line"><span class="role god">God:</span> Moses. I said: I am the God of your fathers. I have seen the suffering of my people in Egypt. I have heard their cry. <em>Go. Free them.</em></div>
+
+<div class="line"><span class="role moses">Moses:</span> And I said: "Who am I, to do this?"</div>
+
+<div class="line"><span class="role god">God:</span> I said I would be with him.</div>
+
+<div class="line"><span class="role moses">Moses:</span> I said: "But what if they don't believe me? What if they don't listen?"</div>
+
+<div class="line"><span class="role god">God:</span> I gave him signs. A staff that became a serpent. A hand that turned leprous and then healed. Water from the Nile that became blood.</div>
+
+<div class="line"><span class="role moses">Moses:</span> I said: "I have never been a good speaker. I'm slow of speech, slow of tongue—please, O Lord, send someone else."</div>
+
+<div class="line"><span class="role god">God:</span> <span class="stage">(sighing)</span> I gave him Aaron.</div>
+
+<div class="line"><span class="role aaron">Aaron:</span> <span class="stage">(waving very enthusiastically)</span> HI. I am ready. I have been ready. This is going to go great.</div>
+
+<div class="line"><span class="role moses">Moses:</span> I said: "Please. Send someone else."</div>
+
+<div class="line"><span class="role god">God:</span> He didn't stop saying that for forty years.</div>
+
+<div class="line"><span class="role moses">Moses:</span> I was right to be nervous. I want the record to show that I was right to be nervous.</div>
+
+<div class="scene">— SCENE FOUR: Pharaoh's Court, Negotiations That Did Not Go Well —</div>
+
+<div class="line"><span class="role god">God:</span> Moses and Aaron went to Pharaoh. Ten times. Each time with the same request.</div>
+
+<div class="line"><span class="role aaron">Aaron:</span> We said: "God says—let my people go."</div>
+
+<div class="line"><span class="role pharaoh">Pharaoh:</span> No.</div>
+
+<div class="line"><span class="role aaron">Aaron:</span> ...God says let my people go.</div>
+
+<div class="line"><span class="role pharaoh">Pharaoh:</span> Still no.</div>
+
+<div class="line"><span class="role moses">Moses:</span> I told you he'd say no.</div>
+
+<div class="line"><span class="role god">God:</span> I told <em>you</em> he'd say no. I said his heart would be hardened, and you said—</div>
+
+<div class="line"><span class="role moses">Moses:</span> I said that seemed counterproductive from a negotiation standpoint, yes.</div>
+
+<div class="line"><span class="role god">God:</span> And I said: the full display of power is important for the historical record.</div>
+
+<div class="line"><span class="role moses">Moses:</span> <span class="stage">(still not convinced)</span> It seemed like a lot.</div>
+
+<div class="line"><span class="role god">God:</span> It was important for the historical record.</div>
+
+<div class="line"><span class="role pharaoh">Pharaoh:</span> I'm still in the room.</div>
+
+
+<h3>The Ten Plagues</h3>
+
+<div class="line"><span class="role god">God:</span> I sent plagues. Ten of them. As we name each one, we dip a finger in our wine and let a drop fall onto a plate. Our cup of joy cannot be completely full when we know others suffered to bring about our freedom. Even Pharaoh's people,who had little say in any of this, were human beings. We don't celebrate their pain.</div>
+
+<div class="do-this">For each plague: dip one finger into your wine and drop it onto a plate or napkin. God will say each plague in Hebrew, and we'll read the English aloud together. After each plague, Pharaoh speaks.</div>
+
+<div class="plague">
+  <span class="plague-icon">🩸</span>
+  <strong>Blood</strong> / <em>Dam</em> / <span class="plague-heb">דָּם</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> Disgusting. Fine—you can go. ...Wait, no, my magicians did the same trick. Doesn't count.</div>
+
+<div class="plague">
+  <span class="plague-icon">🐸</span>
+  <strong>Frogs</strong> / <em>Tzfardeiya</em> / <span class="plague-heb">צְפַרְדֵּעַ</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> The frogs I cannot tolerate. You can go. Take them with you. ...The frogs stopped on their own? Never mind.</div>
+
+<div class="plague">
+  <span class="plague-icon">🦟</span>
+  <strong>Lice</strong> / <em>Kinim</em> / <span class="plague-heb">כִּנִּים</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> My magicians couldn't replicate this one. They said it's the finger of God. I said: still no.</div>
+
+<div class="plague">
+  <span class="plague-icon">🦁</span>
+  <strong>Wild Beasts</strong> / <em>Arov</em> / <span class="plague-heb">עָרוֹב</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> Fine! Go worship your God! But not too far. ...This just in, the beasts are gone? Actually, I've reconsidered.</div>
+
+<div class="plague">
+  <span class="plague-icon">🐄</span>
+  <strong>Cattle Disease</strong> / <em>Dever</em> / <span class="plague-heb">דֶּבֶר</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> No.</div>
+
+<div class="plague">
+  <span class="plague-icon">🔴</span>
+  <strong>Boils</strong> / <em>Sh'chin</em> / <span class="plague-heb">שְׁחִין</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> I am in considerable physical pain. Also: no.</div>
+
+<div class="plague">
+  <span class="plague-icon">⛈</span>
+  <strong>Hail</strong> / <em>Barad</em> / <span class="plague-heb">בָּרָד</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> God is right. I am wrong. This must stop. <em>Please</em> make it stop. They can go. ...It stopped. You know what? Never mind. They're staying.</div>
+
+<div class="plague">
+  <span class="plague-icon">🦗</span>
+  <strong>Locusts</strong> / <em>Arbeh</em> / <span class="plague-heb">אַרְבֶּה</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> I have sinned. Please, forgive me, take the locusts and let them go. ...Wind carried the locusts into the sea. Hm. Well. Still no.</div>
+
+<div class="plague">
+  <span class="plague-icon">🌑</span>
+  <strong>Darkness</strong> / <em>Choshech</em> / <span class="plague-heb">חֹשֶׁךְ</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> Three days. <em>Three days.</em> Fine. Take your children. Leave the livestock. </div>
+<div class="pharaoh-reaction"><span class="role moses" style="font-style:normal;">Moses:</span> <em>Actually, we need the livestock.</em></div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span>What? Why? That doesn't make any— Get out of my palace.</div>
+
+
+<div class="plague">
+  <span class="plague-icon">💀</span>
+  <strong>Death of the Firstborn</strong> / <em>Makat B'chorot</em> / <span class="plague-heb">מַכַּת בְּכוֹרוֹת</span>
+</div>
+<div class="pharaoh-reaction"><span class="role pharaoh" style="font-style:normal;">Pharaoh:</span> <em>[quietly]</em> Go.</div>
+
+<div class="reflect">
+  <span class="reflect-label">A Moment ✦</span>
+  We paused for the ancient plagues—ten drops, ten losses of joy. Now we name the plagues of our own time. Go around: each person names one thing in the world today that diminishes our joy and demands our attention. After each one, dip a finger together.<br><br>
+  <span style="color: var(--muted); font-style: italic; font-size: 0.92em;">Climate change. Displacement. Hunger. Indifference to suffering. Injustice. The erosion of truth. Loneliness. The thing you've been thinking about all week. Say it aloud.</span>
+</div>
+
+<h3>The Crossing</h3>
+
+<div class="line"><span class="role miriam">Miriam:</span> We left so fast the bread didn't have time to rise. That's why we eat matzah.</div>
+
+
+<div class="line"><span class="role god">God:</span> And then Pharaoh changed his mind (again).</div>
+
+<div class="line"><span class="role pharaoh">Pharaoh:</span> <span class="stage">(from somewhere across the room)</span> WAIT—COME BACK—I CHANGED MY MIND—</div>
+
+<div class="line"><span class="role god">God:</span> His army followed them to the Sea of Reeds. There was water ahead and soldiers behind, and no obvious way forward.</div>
+<div class="stage-block">Israelites running towards the sea. Pharaoh's army chasing after them.</div>
+
+<div class="line"><span class="role israelites">Israelite 1:</span> This is extremely bad.</div>
+
+<div class="line"><span class="role israelites">Israelite 2:</span> I said something was going to go wrong.</div>
+
+<div class="line"><span class="role miriam">Miriam:</span> You did not say that.</div>
+
+<div class="line"><span class="role israelites">Israelite 3:</span> Were there not enough graves in Egypt? Did we have to come all the way out here to die by the sea?</div>
+
+<div class="line"><span class="role moses">Moses:</span> Everyone, please— <span class="stage">[He raises his arm.]</span></div>
+
+<div class="line"><span class="role israelites">Israelite 1:</span> Nothing is happening.</div>
+
+<div class="line"><span class="role miriam">Miriam:</span> Wait for it.</div>
+
+<div class="line"><span class="role god">God:</span> The waters parted.</div>
+
+<div class="stage-block">(A dramatic pause)</div>
+
+<div class="line"><span class="role israelites">Israelite 3:</span> ...Okay. That's genuinely impressive.</div>
+
+
+<div class="stage-block">The Israelites cross. Miriam picks up whatever is nearby—a wooden spoon, a phone, a cup—and starts to sing. She always had the right song for the moment.</div>
+
+<div class="music-box">🎵 <a target="_blank" href="https://open.spotify.com/track/26B6ops2EgkJD8WMI4CLKZ?si=57ea32afaa9d4a81">Miriam's Song</a></div>
+
+
+<div class="line"><span class="role god">God:</span> The waters closed. The army did not make it across. The Israelites stood on the far shore and looked at each other.</div>
+
+<div class="line"><span class="role god">God:</span> They were free.</div>
+
+
+<h3>Dayenu — It Would Have Been Enough</h3>
+
+<div class="line"><span class="role god">God:</span> We sing Dayenu:"it would have been enough." It moves through every miracle of the Exodus and says: even just this one thing would have been enough. If God had only brought us out of Egypt:Dayenu. If God had only parted the sea: Dayenu. If God had only given us the Torah: Dayenu.</div>
+
+<div class="line"><span class="role israelites">Next reader:</span> But Dayenu is also an opportunity to reflect. If each thing would have been enough, and then there was more... the song asks us to notice that we have always already had more than enough. And that gratitude doesn't mean complacency. We are grateful, <em>and</em> we know there is still more work to do. Both are true at once.</div>
+
+<div class="reflect">
+  <span class="reflect-label">A Moment ✦</span>
+  Go around the room. Each person names one thing, just one,
+   that would already be enough in their life. Just one true thing. And after each one, we all respond:
+   <div class="together">DAYENU</div>
+</div>
+
+
+
+
+<div class="stage-block">Go around. Take turns. Make it real. Take as long as you need.</div>
+
+<div class="do-this">
+  The song:<br><br>
+  <em>Ilu ho-tsi, ho-tsi-a-nu / Ho-tsi-a-nu mi-Mitz-ra-yim / Ho-tsi-a-nu mi-Mitz-ra-yim / Da-ye-nu!</em><br><br>
+  Verse: <em>Ilu natan, natan la-nu / Natan la-nu et ha-Torah / Natan la-nu et ha-Torah / Da-ye-nu!</em><br><br>
+  Traditional note: some families hit each other with scallions during Dayenu. This is a real thing with questionable origins. Mine doesn't.
+</div>
+
+<div class="music-box">🎵 <a target="_blank" href="https://open.spotify.com/track/3gWApj1XdnAxvGuD4PYVdv?si=2c27e718c91343cc">Dayenu</a></div>
+
+
+<div class="wine-box">🍷 Drink the second cup of wine.</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. RACHTZAH                                 -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>⑥ Rachtzah — Washing Hands Again</h2>
+
+<div class="line"><span class="role god">God:</span> We wash our hands again. This time with a blessing, because now we're about to eat. The first washing was about arriving. This one is about intention. It says: I know what I'm doing. I'm ready. I'm here on purpose.</div>
+
+<div class="hebrew">בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדַיִם</div>
+<div class="transliteration">Baruch Atah Adonai, Eloheinu Melech ha-olam, asher kidshanu b'mitzvotav v'tzivanu al netilat yadayim.</div>
+<div class="translation">Blessed are You, who commands us regarding the washing of hands.</div>
+
+<div class="do-this">Pass the bowl again. Pour three times over each hand. Dry them. This time with intention.</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 7-8. MOTZI MATZAH                           -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>⑦–⑧ Motzi Matzah — Eat the Matzah</h2>
+
+<div class="line"><span class="role god">God:</span> Matzah. The bread of affliction. The bread of haste. The bread of people who were so 
+  ready to leave that they could not wait for it to rise. It is not a great bread. And yet we eat it every year because the point 
+  is not the bread. The point is the leaving. The point is to remember that not all are yet free.</div>
+
+<div class="hebrew">בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ</div>
+<div class="transliteration">Baruch Atah Adonai, Eloheinu Melech ha-olam, ha-motzi lechem min ha-aretz.</div>
+<div class="translation">Blessed are You, who brings forth bread from the earth.</div>
+
+<div class="hebrew">בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל אֲכִילַת מַצָּה</div>
+<div class="transliteration">Baruch Atah Adonai, Eloheinu Melech ha-olam, asher kidshanu b'mitzvotav v'tzivanu al achilat matzah.</div>
+<div class="translation">Blessed are You, who commands us to eat matzah.</div>
+
+<div class="do-this">Pass around the matzah. Each person takes a piece and eats it.(Sorry)</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. MAROR                                    -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>⑨ Maror — The Bitter Herbs</h2>
+
+<div class="line"><span class="role god">God:</span> We eat bitter herbs. Horseradish that is raw, strong, unapologetic. The bitterness of slavery. The tradition is to eat it without softening it, so that we feel, briefly and mildly, something of what bitterness means.</div>
+
+<div class="reflect">
+  <span class="reflect-label">Next reader ✦</span>
+  The bitterness we taste tonight isn't only historical. Slavery has not ended. it has changed its name and become harder to see. 
+  When you go to the grocery store: who picked the produce? Who sewed the clothes you're wearing? Who harvested the coffee beans? Modern 
+  supply chains run, in part, on coerced and exploited labor that we are designed not to think about. The maror asks us to think about it. 
+</div>
+
+<div class="hebrew">בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל אֲכִילַת מָרוֹר</div>
+<div class="transliteration">Baruch Atah Adonai, Eloheinu Melech ha-olam, asher kidshanu b'mitzvotav v'tzivanu al achilat maror.</div>
+<div class="translation">Blessed are You, who commands us to eat bitter herbs.</div>
+
+<div class="do-this">Take a piece of horseradish. Eat.</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 10. KORECH                                  -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>⑩ Korech — The Hillel Sandwich</h2>
+
+<div class="line"><span class="role god">God:</span> Now we make a sandwich. This comes from Hillel, a great rabbi, who used to eat his matzah and maror together in one bite. He said they belong together. Bitterness and sweetness and liberation: not separate, not sequential, but simultaneous. That's what Passover keeps insisting on. You don't get the freedom without acknowledging the bitterness that came before it. You eat them together, or you're not eating the whole meal.</div>
+
+<div class="do-this">Eat Hillel's sandwich: matzah + horseradish + charoset.</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CUPS 3 & 4 + ELIJAH + MIRIAM — BEFORE MEAL -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>Before We Eat — Cups Three and Four</h2>
+
+<div class="line"><span class="role god">God:</span> In this family, we do all four cups before the meal. Which means: two more now, 
+  plus Elijah and Miriam, and then we eat. This is not the standard arrangement, but it's a party. </div>
+
+<div class="wine-box">🍷 Pour the third cup.</div>
+
+<div class="hebrew">בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּפֶן</div>
+<div class="transliteration">Baruch Atah Adonai, Eloheinu Melech ha-olam, borei p'ri hagafen.</div>
+<div class="translation">Blessed are You, who creates the fruit of the vine.</div>
+
+<div class="wine-box">🍷 Drink the third cup.</div>
+
+<h3>Elijah's Cup — and Miriam's</h3>
+
+<div class="line"><span class="role god">God:</span> Remember that fifth cup I mentioned at the very beginning? This is it. 
+  We fill a cup for Elijah the prophet,the one who is supposed to arrive and settle all unresolved debates, including 
+  whether there should be a fifth cup. He hasn't arrived. We pour it anyway. On Passover night, the tradition says he 
+  travels to every seder in the world (like Santa Claus). We open the door for him.</div>
+
+<div class="do-this">Fill Elijah's cup. Open the front door. Stand at the threshold. Look out into the night..</div>
+
+
+<div class="line"><span class="role god">God:</span> Did Elijah drink from his cup? <span class="stage">[Examine it carefully. There will be no consensus.]</span> The tradition says he takes a sip at every seder. The tradition also says we don't know when he'll arrive. These two things are in tension and we sit with that tension. He hasn't arrived yet because the work isn't finished. Every year we open the door because hope requires an open door.</div>
+
+<div class="line"><span class="role miriam">Miriam:</span> While we wait for Elijah—there is also Miriam's Cup. This one is filled with water. 
+  Legend says that a well traveled with the Israelites through all forty years of desert wandering. It was called Miriam's Well. Water and wine. 
+  Elijah and Miriam. The prophet who is coming, and the prophet who was always already there.</div>
+
+<div class="do-this">Each person pours a little from their water glass into Miriam's Cup. Close the door.</div>
+
+<div class="wine-box">🍷 Pour the fourth and final cup.</div>
+
+<div class="line"><span class="role god">God:</span> We close the Seder with Hallel: psalms of praise. Then we eat.</div>
+
+<div class="hebrew" style="font-size: 1.2em; margin-bottom: 0.2em;">לְשָׁנָה הַבָּאָה בִּירוּשָׁלָיִם</div>
+<div class="together" style="margin-top: 0.3em; font-size: 1.15em;">
+L'shana haba'ah b'Yerushalayim.<br>
+<span style="font-weight: 400; font-style: normal; font-size: 0.9em; color: var(--muted);">Next year in Jerusalem*.</span>
+</div>
+
+<div class="line"><span class="role god">God:</span> *This is traditional language, and we chose to include it because it's an important part of the tradition, 
+  but a Jerusalem that is only safe for some is not the Jerusalem we're praying for. So we add, together:</div>
+
+  <div class="together" style="font-size: 1.2em; margin: 0.5em 0 1em;">
+    Next year, may we be in a freer world. Next year, may all who are enslaved be free. Next year, may we have done enough.
+  </div>
+
+<div class="hebrew">בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּפֶן</div>
+<div class="transliteration">Baruch Atah Adonai, Eloheinu Melech ha-olam, borei p'ri hagafen.</div>
+<div class="translation">Blessed are You, who creates the fruit of the vine.</div>
+
+<div class="wine-box">🍷 Drink the fourth cup.</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11. SHULCHAN ORECH                          -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>⑪ Shulchan Orech — The Meal</h2>
+
+<div class="line"><span class="role god">God:</span> Eat the food.</div>
+
+<div class="do-this" style="text-align: center; padding: 20px; font-size: 1.05em;">
+  🥘 &nbsp; EAT. DRINK. BE FREE. &nbsp; 🌿<br>
+  <span style="font-weight: normal; font-style: italic; font-size: 0.88em; display: block; margin-top: 6px;">Come back when you're done. One more thing left.</span>
+</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 12. TZAFUN                                  -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>⑫ Tzafun — Finding the Afikomen</h2>
+
+<div class="line"><span class="role god">God:</span> The Afikomen (the piece of matzah we broke and hid at the very start of the night) must now be found. We have drunk all four cups. We have eaten the meal. But the seder cannot formally end until the Afikomen is located and ransomed back. The final taste in our mouths must be matzah. The bread of liberation gets the last word.</div>
+
+<div class="line"><span class="role god">God:</span> Someone in this room knows where it is. Or has already found it and is waiting to negotiate. Both are legitimate strategies.</div>
+
+<div class="do-this">
+  Search for the Afikomen. The finder negotiates ransom before handing it over. No demand is too unreasonable. Suggestions: the host sings a song,
+   tells an embarrassing story, makes a promise, owes a favor. Once ransomed, break it into pieces. Everyone eats a piece.
+ 
+</div>
+
+<hr>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 15. NIRTZAH                                 -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2>⑮ Nirtzah — It Is Accepted</h2>
+
+<div class="together" style="font-size: 1.2em; margin: 0.5em 0 1em;">
+  Chag Sameach. Happy Passover. 🌿
+</div>
+
+
+
+<!-- CLOSING -->
+
+
+
+</div>
+
+<div style="text-align: center; margin-top: 3em; padding-top: 2em; border-top: 1px solid var(--border);">
+  <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.5em; color: var(--teal); margin-bottom: 0.4em;">חַג שָׂמֵחַ</div>
+  <div style="color: var(--muted); font-style: italic; font-size: 0.9em;">Chag Sameach — Happy Passover</div>
+  <div style="margin-top: 1.5em; color: #bbb; font-size: 0.78em; letter-spacing: 0.08em; text-transform: uppercase;">Passover 5786</div>
+</div>
+
+</body>
+</html>
