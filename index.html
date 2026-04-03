@@ -34,6 +34,77 @@
   --israelites:  #7a4e10;
 }
 
+/* ─── NAVIGATION ────────────────────────────── */
+.character-nav {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.character-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background: var(--teal);
+  color: white;
+  padding: 10px 18px;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+}
+
+.dropdown-button:hover {
+  background: #165248;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  min-width: 240px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 18px;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.9em;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background: var(--teal-light);
+  color: var(--teal);
+}
+
+@media print {
+  .character-nav { display: none; }
+}
+
 html { background: #faf8f5; }
 
 body {
@@ -405,6 +476,24 @@ hr.heavy {
     Prepared for the Kenorkin Seder<br>
     April 2026
   </div>
+
+  <!-- CHARACTER NAVIGATION -->
+  <nav class="character-nav">
+    <div class="character-dropdown">
+      <button class="dropdown-button" id="characterDropdown">Choose Your Character ▾</button>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="moses.html">Moses</a>
+        <a href="aaron.html">Aaron</a>
+        <a href="pharaoh.html">Pharaoh</a>
+        <a href="miriam.html">Miriam</a>
+        <a href="israelite-1.html">Israelite #1 (The Worrier)</a>
+        <a href="israelite-2.html">Israelite #2 (The Revisionist)</a>
+        <a href="israelite-3.html">Israelite #3 (The Rhetorician)</a>
+        <a href="youngest.html">The Youngest</a>
+      </div>
+    </div>
+  </nav>
+
 </div>
 
 <hr class="heavy">
@@ -1120,6 +1209,24 @@ L'shana haba'ah b'Yerushalayim.<br>
   <div style="color: var(--muted); font-style: italic; font-size: 0.9em;">Chag Sameach — Happy Passover</div>
   <div style="margin-top: 1.5em; color: #bbb; font-size: 0.78em; letter-spacing: 0.08em; text-transform: uppercase;">Passover 5786</div>
 </div>
+
+<script>
+// Character dropdown toggle
+const dropdownButton = document.getElementById('characterDropdown');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+dropdownButton.addEventListener('click', function(e) {
+  e.stopPropagation();
+  dropdownMenu.classList.toggle('show');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  if (!dropdownMenu.contains(e.target) && e.target !== dropdownButton) {
+    dropdownMenu.classList.remove('show');
+  }
+});
+</script>
 
 </body>
 </html>
